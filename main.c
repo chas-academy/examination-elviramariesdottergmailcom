@@ -15,6 +15,7 @@ void name_uppercase (char name[]) {
     name[0] = toupper(name[0]);
 }
 
+// function to calculate individual mean scores for students.
 float mean_calculator(int score[], float mean) {
 
     for (int i = 0; i < 13; i++) {
@@ -24,23 +25,12 @@ float mean_calculator(int score[], float mean) {
     return mean / 13;
 }
 
+// function to print the names of the students below the total mean
 void below_mean(char name[], float mean, float total_mean) {
 
     if (mean < total_mean) {
         printf("%s\n", name);
     }
-}
-
-void test_printer(char name[], int score[]) {
-
-    printf("%s ", name);
-
-    for (int i = 0; i < 13; i++) {
-        printf("%d ", score[i]);
-    }
-
-    printf("\n");
-
 }
 
 int main() {
@@ -62,7 +52,7 @@ int main() {
     int scores4[13];
     int scores5[13];
 
-    // integers to store the means of each individual students test scores, initialized with 0.
+    // integers to store the means of each individual students test scores.
     float mean1;
     float mean2;
     float mean3;
